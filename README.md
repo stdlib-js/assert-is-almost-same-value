@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-almost-same-value/tags). For example,
+
+```javascript
 import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@v0.1.1-esm/index.mjs';
 ```
 
@@ -123,7 +128,7 @@ bool = isAlmostSameValue( z1, z2, 0 );
 
 import EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@esm/index.mjs';
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
-import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@v0.1.1-esm/index.mjs';
+import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@esm/index.mjs';
 
 console.log( isAlmostSameValue( true, true, 0 ) );
 // => true
