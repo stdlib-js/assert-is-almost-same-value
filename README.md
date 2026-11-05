@@ -35,14 +35,32 @@ limitations under the License.
 
 > Test if two arguments are approximately the same value within a specified number of ULPs (units in the last place).
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-almost-same-value
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@esm/index.mjs';
+var isAlmostSameValue = require( '@stdlib/assert-is-almost-same-value' );
 ```
 
 #### isAlmostSameValue( a, b, maxULP )
@@ -50,7 +68,7 @@ import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-a
 Tests if two arguments are approximately the same value within a specified number of ULPs (units in the last place).
 
 ```javascript
-import EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@esm/index.mjs';
+var EPS = require( '@stdlib/constants-float64-eps' );
 
 var bool = isAlmostSameValue( 1.0, 1.0+EPS, 1 );
 // returns true
@@ -65,7 +83,7 @@ bool = isAlmostSameValue( {}, {}, 1 );
 In contrast to the strict equality operator `===`, the function distinguishes between `+0` and `-0` and treats `NaNs` as the same value.
 
 ```javascript
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var bool = isAlmostSameValue( NaN, 1.0, 1 );
 // returns false
@@ -115,15 +133,10 @@ bool = isAlmostSameValue( z1, z2, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@esm/index.mjs';
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
-import isAlmostSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-almost-same-value@esm/index.mjs';
+```javascript
+var EPS = require( '@stdlib/constants-float64-eps' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
+var isAlmostSameValue = require( '@stdlib/assert-is-almost-same-value' );
 
 console.log( isAlmostSameValue( true, true, 0 ) );
 // => true
@@ -159,10 +172,6 @@ console.log( isAlmostSameValue( [], [], 1 ) );
 
 console.log( isAlmostSameValue( isAlmostSameValue, isAlmostSameValue, 0 ) );
 // => true
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -186,7 +195,7 @@ console.log( isAlmostSameValue( isAlmostSameValue, isAlmostSameValue, 0 ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
